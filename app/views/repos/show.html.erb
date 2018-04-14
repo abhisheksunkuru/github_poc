@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Commit#</th>
+      <th scope="col">Author</th>
+      <th scope="col">message</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <% @commits.each_with_index do |c,i|%>
+      <tr>
+        <th scope="row"><%= c.sha %></th>
+        <td><%=c.commit.author.name %> <%=c.commit.author.date%></td>
+        <td><%= c.commit.message %></td>
+      </tr>
+    <%end%>
+  </tbody>
+
+</table>
