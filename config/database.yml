@@ -82,6 +82,5 @@ test:
 #
 production:
   <<: *default
-  database: github_poc_production
-  username: github_poc
-  password: <%= ENV['GITHUB_POC_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
+
